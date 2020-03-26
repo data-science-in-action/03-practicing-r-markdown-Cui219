@@ -1,0 +1,50 @@
+---
+title: "Third"
+author: "cui219"
+date: "2020/3/26"
+output:
+  html_document:
+    toc: yes
+    df_print: paged
+---
+
+## 正态分布
+
+### 公式与解释
+
+Normal Distribution,正态分布，又名高斯分布。
+
+Gaussian Distribution，高斯分布。
+
+若随机变量X的概率密度函数为 
+
+  $f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^\frac{(x-\mu)^2}{2\sigma^2}$
+
+exp(x)是一个指数函数，定义为：
+
+  $exp(x)=e^x$
+
+```{r}
+data=rnorm(100);data
+```
+
+## 分析
+
+### 统计性描述
+
+|Min     |median   |mean   |max    |
+|------  |---------|-------|------ |
+|-2.61233|0.05828  |0.06476|2.75542|
+
+由表可知，data的最小值为-2.61233，均值为0.06476，最大值为2.75542。
+
+```{r}
+plot(data)
+```
+
+由散点图可知，数据是随机的。
+
+```{r}
+boxplot(data)
+```
+
